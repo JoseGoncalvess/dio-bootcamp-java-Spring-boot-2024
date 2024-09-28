@@ -43,10 +43,10 @@ public class CatalogoLivros {
                     livroAutor = l;
                 }}
             }
-        return  livro;
+        return  livroAutor;
         }
     }
-}
+
 
 
 
