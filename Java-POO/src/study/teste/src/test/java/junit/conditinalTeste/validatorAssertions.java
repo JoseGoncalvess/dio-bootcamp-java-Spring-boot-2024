@@ -2,7 +2,8 @@ package junit.conditinalTeste;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.studyTest.Pessoa;
+import org.studyTest.classJunit.Pessoa;
+import org.studyTest.classsMocks.Endereco;
 
 public class validatorAssertions {
 
@@ -24,7 +25,7 @@ public class validatorAssertions {
         Assertions.assertNull(eu);
     }
     void validarPessoalIsNotNull(){
-        Pessoa eu = new Pessoa("Gonçalves",23);
+        Pessoa eu = new Pessoa("Gonçalves",23,new Endereco("RUA", 1234, 13));
         Assertions.assertNotNull(eu);
     }
 

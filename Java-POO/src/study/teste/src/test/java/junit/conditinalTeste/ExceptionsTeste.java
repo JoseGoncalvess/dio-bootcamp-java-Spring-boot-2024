@@ -2,7 +2,7 @@ package junit.conditinalTeste;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.studyTest.Conta;
+import org.studyTest.classJunit.Conta;
 
 public class ExceptionsTeste {
 

@@ -1,4 +1,4 @@
-package org.studyTest;
+package org.studyTest.classJunit;
 
 import java.util.IllegalFormatException;
 

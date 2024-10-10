@@ -1,7 +1,7 @@
 package junit.conditinalTeste;
 
 import org.junit.jupiter.api.*;
-import org.studyTest.BacoDeDados;
+import org.studyTest.classJunit.BacoDeDados;
 
 public class LifeCicloTets {
 
@@ -20,7 +20,7 @@ public class LifeCicloTets {
     }
 
     // APOS CADA TESTE SERÁ FEITO
-    @AfterEach
+    @BeforeEach
     void removerDados(){
         BacoDeDados.removeuDados();
     }
