@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import study.SpringBoot.BeansxComponent.Calculadora;
+import study.SpringBoot.Scope.SistemaDeMensagem;
 
 import java.security.PublicKey;
 
@@ -20,6 +21,7 @@ public class PrimeirosPassosApplication {
 			System.out.println("O valor da soma agora é:" + calculadora.calcular(1,2));
 		};
 	}
+
 
 
 }
