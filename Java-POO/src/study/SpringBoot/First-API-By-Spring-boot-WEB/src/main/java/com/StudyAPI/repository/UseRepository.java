@@ -1,5 +1,6 @@
 package com.StudyAPI.repository;
 
+import com.StudyAPI.handller.BusinessException;
 import com.StudyAPI.model.Usuario;
 import org.springframework.stereotype.Repository;
 
@@ -10,13 +11,19 @@ import java.util.List;
 public class UseRepository {
 
     public void save(Usuario user){
-        if (user.getId() == null){
-            System.out.println("SAVE - RECEBENDO USUARIO DA CAMADA REPOSITORIO");
-            System.out.println(user);
+        if (user.getLogin().equals(null)){
+            throw new BusinessException("Campo login é Obrigatorio");
         }else {
-            System.out.println("UPDATE - RECEBENDO USUARIO DA CAMADA REPOSITORIO ");
-            System.out.println(user);
+            if (user.getId() == null){
+                System.out.println("SAVE - RECEBENDO USUARIO DA CAMADA REPOSITORIO");
+                System.out.println(user);
+            }else {
+                System.out.println("UPDATE - RECEBENDO USUARIO DA CAMADA REPOSITORIO ");
+                System.out.println(user);
+            }
         }
+
+
     }
 
     public  void deletByID(Integer id){

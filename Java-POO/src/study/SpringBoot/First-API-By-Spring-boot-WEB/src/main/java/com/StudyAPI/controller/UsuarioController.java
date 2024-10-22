@@ -69,11 +69,6 @@ public class UsuarioController {
     }
 
     @Operation(summary = "Salva uma usuario", description = "Salve um  usuarios ue foi passado no body")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Salvou um  Usuario com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
-            @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
-    })
     @PostMapping()
     public void saveUser(@RequestBody Usuario user){
         repository.save(user);
@@ -83,6 +78,7 @@ public class UsuarioController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Atualizou o Usuario com sucesso"),
             @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
+            @ApiResponse(responseCode = "409", description = "Erro no servidor", content = @Content),
             @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
     })
     @PatchMapping("/{id}")
