@@ -41,7 +41,7 @@ public class UsuarioController {
             @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
             @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
     })
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Usuario getUserById(@PathVariable("id") Integer Id){
        return repository.findByID(Id);
     }
@@ -52,8 +52,8 @@ public class UsuarioController {
             @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
             @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
     })
-    @GetMapping("/{name}")
-    public Usuario getUserByName(@PathVariable("name") String name){
+    @GetMapping("/name/{name}")
+    public Usuario getUserByName(@PathParam("name") String name){
         return repository.finsByName(name);
     }
 
