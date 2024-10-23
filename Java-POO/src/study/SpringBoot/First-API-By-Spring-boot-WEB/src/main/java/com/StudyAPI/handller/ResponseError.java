@@ -4,10 +4,25 @@ import java.util.Date;
 
 public class ResponseError {
     private Date timestamp = new Date();
-    private  String status = "error";
-    private  int statusCode = 409;
+    private  String status;
+    private  int statusCode ;
     private  String error;
 
+    public  ResponseError(String status, String error, int statusCode){
+        this.error = error;
+        this.statusCode = statusCode;
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ResponseError{" +
+                "timestamp=" + timestamp +
+                ", status='" + status + '\'' +
+                ", statusCode=" + statusCode +
+                ", error='" + error + '\'' +
+                '}';
+    }
 
     public Date getTimestamp() {
         return timestamp;

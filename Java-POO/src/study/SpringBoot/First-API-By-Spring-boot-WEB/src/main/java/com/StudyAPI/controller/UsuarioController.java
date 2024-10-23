@@ -1,5 +1,6 @@
 package com.StudyAPI.controller;
 
+import com.StudyAPI.handller.BusinessException;
 import com.StudyAPI.repository.UseRepository;
 import com.StudyAPI.model.Usuario;
 import io.swagger.v3.oas.annotations.Operation;
@@ -40,9 +41,9 @@ public class UsuarioController {
             @ApiResponse(responseCode = "400", description = "Requisição inválida", content = @Content),
             @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
     })
-    @GetMapping("/id/{id}")
-    public Usuario getUserById(@PathParam("id") Integer Id){
-       return repository.finsByID(Id);
+    @GetMapping("/{id}")
+    public Usuario getUserById(@PathVariable("id") Integer Id){
+       return repository.findByID(Id);
     }
 
     @Operation(summary = "Retorna uma usuario basedo no name", description = "Retorna um  usuarios")
@@ -52,7 +53,7 @@ public class UsuarioController {
             @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
     })
     @GetMapping("/{name}")
-    public Usuario getUserByName(@PathParam("name") String name){
+    public Usuario getUserByName(@PathVariable("name") String name){
         return repository.finsByName(name);
     }
 
@@ -64,14 +65,20 @@ public class UsuarioController {
             @ApiResponse(responseCode = "500", description = "Erro no servidor", content = @Content)
     })
     @DeleteMapping("/{id}")
-    public void deletUserByName(@PathParam("id") Integer id){
-        repository.deletByID(id);
+    public void deletUserByName(@PathVariable("id") Integer id){
+        System.out.println(id);
+        if (!repository.deletByID(id))
+            throw new BusinessException("Id não pertence a nenhum  usuario");
+       ;
     }
 
     @Operation(summary = "Salva uma usuario", description = "Salve um  usuarios ue foi passado no body")
     @PostMapping()
     public void saveUser(@RequestBody Usuario user){
-        repository.save(user);
+        boolean response = repository.save(user);
+        if (!response) {
+            throw new BusinessException("Campo login é Obrigatório");
+        }
     }
 
     @Operation(summary = "Atualiza um usuario basedo no ID", description = "Atualiza  um  usuarios baseado no id")
@@ -83,6 +90,9 @@ public class UsuarioController {
     })
     @PatchMapping("/{id}")
     public void atualizaUser(@RequestBody Usuario user, Integer id){
-        repository.atualizarByID(id,user);
+      Usuario userDb =  repository.atualizarByID(id,user);
+      if (userDb.getName().isEmpty() )
+          throw new BusinessException("Nome Obrigatorio");
+
     }
 }

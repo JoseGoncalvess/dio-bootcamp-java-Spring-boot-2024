@@ -10,25 +10,29 @@ import java.util.List;
 @Repository
 public class UseRepository {
 
-    public void save(Usuario user){
-        if (user.getLogin().equals(null)){
-            throw new BusinessException("Campo login é Obrigatorio");
-        }else {
-            if (user.getId() == null){
-                System.out.println("SAVE - RECEBENDO USUARIO DA CAMADA REPOSITORIO");
+    public boolean save(Usuario user){
+        if (user.getLogin() == null || user.getLogin().trim().isEmpty()) {
+            return false;
+        } else {
+            if (user.getId() == null) {
+                System.out.println("SAVE - RECEBENDO USUÁRIO DA CAMADA REPOSITORIO");
                 System.out.println(user);
-            }else {
-                System.out.println("UPDATE - RECEBENDO USUARIO DA CAMADA REPOSITORIO ");
+            } else {
+                System.out.println("UPDATE - RECEBENDO USUÁRIO DA CAMADA REPOSITORIO");
                 System.out.println(user);
             }
-        }
-
-
+            return true;
+ }
     }
 
-    public  void deletByID(Integer id){
+    public  boolean deletByID(Integer id){
+        if (id == 1){
+            return  false;
+        }
         System.out.println("DELETE/id - RECENDO UMA ID PARA DELETAR UM UDUARIO EXCLUSIVO");
         System.out.println(id);
+        return true;
+
     }
     public List<Usuario> findAll(){
         System.out.println("LIST - LISTANDO USUARIOS REGISTRADO NO SISTEMA");
@@ -38,13 +42,13 @@ public class UseRepository {
         return  allusers;
     }
 
-    public  Usuario finsByID(Integer id){
+    public  Usuario findByID(Integer id){
         System.out.println("GET/id - RECENDO UMA ID PARA BUSCAR UM UDUARIO EXCLUSIVO");
         return new Usuario("Gonçalves", "user","124");
     }
     public  Usuario atualizarByID(Integer id, Usuario user){
         System.out.println("PATCH/id - RECEDO UMA ID PARA ATUALIZAR UM UDUARIO EXCLUSIVO");
-        return new Usuario("Gonçalves", "user","124");
+        return new Usuario(user.getName(), user.getLogin(), user.getPassword());
     }
 
     public  Usuario finsByName(String name){
