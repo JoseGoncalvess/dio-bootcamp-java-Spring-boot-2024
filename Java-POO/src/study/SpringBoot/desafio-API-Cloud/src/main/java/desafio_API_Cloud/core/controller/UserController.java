@@ -53,7 +53,7 @@ public record UserController(UserService userService) {
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(user.getId())
-                .toUri();
+                .toUri(); // TODO COM ESSA FUNÇÃO CONSIGO RETRONAO PATH DO USURIO
         return ResponseEntity.created(location).body(new UserDto(user));
     }
 
