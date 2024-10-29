@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e67d51ac-463e-4fc4-b168-b876cc696d2e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/domain/models/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/domain/models/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/domain/models/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/domain/models/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/domain/models/interfaces/Iaccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Banco-Digital/src/main/java/org/dbDigital/service/AccoutService.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2o7jFNc9duwwI5bRaqbLKz5D87w" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Dados/ProjectJava/dio-trilha-java-basico/Desafios/BootCamp/src/main/java/org/bootCamp/Main.java&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e67d51ac-463e-4fc4-b168-b876cc696d2e" name="Changes" comment="" />
+      <created>1730227406349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730227406349</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/bootCamp/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
